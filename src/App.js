@@ -8,6 +8,7 @@ import './style.css';
 import { Container } from "@mui/material";
 import Survey from "./components/Survey";
 import FinalPage from "./components/FinalPage";
+import Complete from "./components/Complete";
 
 export const AnimationContext = createContext({
   animationStart: "",
@@ -58,9 +59,11 @@ function App() {
     setState(<Survey handleClick = {openFinalPage} handleSendData={handleSendData}/>)
   }
   function openFinalPage(){
-    setState(<FinalPage data={form}/>)
+    // setState(<FinalPage data={form}/>)
   }
-
+  function openComplete(){
+    setState(<Complete/>)
+  }
   function handleSendData(data){
     setForm(form =>[...form,data])
   }
@@ -75,6 +78,8 @@ function App() {
   })
   useEffect(() => {
     console.log(form)
+    if (form.length===4)
+    setState(<FinalPage handleClick={openComplete} data={form}/>)
   },[form])
   return (
     <AnimationContext.Provider value={value}>
