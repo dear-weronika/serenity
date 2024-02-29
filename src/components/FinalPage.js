@@ -1,8 +1,37 @@
-export default function FinalPage(params) {
-    
-    return(
-        <div>
-            its final page
-        </div>
-    )
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+export default function FinalPage({data}) {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_lesz7im', 'template_f0tg25q', form.current, {
+                publicKey: '8QvNVflk_6739D0nz',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
+    console.log(data)
+    return (
+        <form ref={form} onSubmit={sendEmail}>
+            <label>Name</label>
+            <input type="text" name="user_name" />
+            <label>Email</label>
+            <input type="email" name="user_email" />
+            <label>Message</label>
+            <textarea name="message" />
+            <input type="submit" value="Send" />
+        </form>
+    );
 };
+
