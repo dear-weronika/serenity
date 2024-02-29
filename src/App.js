@@ -14,10 +14,20 @@ export const AnimationContext = createContext({
 })
 function App() {
 
+// state of visible page
   const [state, setState] = useState(<WelcomePage handleClick={handleClick} />)
+
+  // state of animation - if started 
   const [animationStart, setAnimationStart] = useState(false)
+
+  // state of haptic of bubble
   const [exercise, setExercise] = useState()
+
+  // state if there will be another questionnaire later
   const [questionnaire, setQuestionnare] = useState(true)
+
+  // state of data with all questionnaires and survey
+  const [form , setForm] = useState([])
 
   const value = useMemo(
     () => ({ animationStart, setAnimationStart }),
@@ -29,7 +39,7 @@ function App() {
     // setState(<BreathingExercise />)
   }
   function handleYes() {
-    setState(<Questionnaire version={1} handleClick={firstExercise} />)
+    setState(<Questionnaire version={1} handleClick={firstExercise} handleSendData={handleSendData}/>)
   }
   function handleNo() {
     setState(<HapticTestFailed />)
@@ -46,16 +56,21 @@ function App() {
   function openSurvey() {
     setState(<Survey />)
   }
+  function handleSendData(data){
+    setForm([...form,data])
+  }
   useEffect(() => {
     if (animationStart) {
       setTimeout(() => {
-        setState(<Questionnaire version={questionnaire ? 2 : 3} handleClick={questionnaire ? secondExercise : openSurvey} />)
+        setState(<Questionnaire version={questionnaire ? 2 : 3} handleClick={questionnaire ? secondExercise : openSurvey} handleSendData={handleSendData}/>)
         setAnimationStart(!animationStart)
         setQuestionnare(false)
       }, 12000)
     }
   })
-
+  useEffect(() => {
+    console.log(form)
+  },[form])
   return (
     <AnimationContext.Provider value={value}>
       {useMemo(() => (
