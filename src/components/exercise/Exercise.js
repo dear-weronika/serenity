@@ -33,7 +33,7 @@ export default function Exercise({ version }) {
             // navigator.vibrate(1000)
         }
         return () => clearInterval(interval)
-    }, [state, animate])
+    }, [state, animate, version])
 
     return (
         <Container ref={scope} sx={{ display: "flex", flexDirection: "column", justifyContent: "center", height: "100vh", alignItems: "center" }}>
