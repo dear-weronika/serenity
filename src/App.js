@@ -7,6 +7,7 @@ import BreathingExercise from "./components/exercise/BreathingExercise";
 import './style.css';
 import { Container } from "@mui/material";
 import Survey from "./components/Survey";
+import FinalPage from "./components/FinalPage";
 
 export const AnimationContext = createContext({
   animationStart: "",
@@ -54,8 +55,12 @@ function App() {
     setState(<BreathingExercise version={!exercise} />)
   }
   function openSurvey() {
-    setState(<Survey />)
+    setState(<Survey handleClick = {openFinalPage} handleSendData={handleSendData}/>)
   }
+  function openFinalPage(){
+    setState(<FinalPage/>)
+  }
+
   function handleSendData(data){
     setForm([...form,data])
   }
