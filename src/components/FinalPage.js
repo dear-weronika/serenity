@@ -58,8 +58,28 @@ export default function FinalPage({ data, handleClick }) {
                 <h4>Survey</h4>
                 <label>Gender</label>
                 <input type="text" name="gender" value={data[3].gender} readOnly />
+                <br></br>
+                <label>Age</label>
+                <input type="text" name="age" value={data[3].age} readOnly />
+                <br></br>
+                <label>Occupation</label>
+                <input type="text" name="occupation" value={data[3].occupation} readOnly />
+                <br></br>
+                <label>Technology Usage</label>
+                <input type="text" name="technologyUsage" value={data[3].technologyUsage} readOnly />
+                <br></br>
+                <label>Practised Meditation</label>
+                <input type="text" name="practisedMeditation" value={data[3].practisedMeditation} readOnly />
+                <br></br>
+                <label>Practice Breathing</label>
+                <input type="text" name="practiceBreathing" value={data[3].practiceBreathing} readOnly />
+                <br></br>
+                <label>Question 7</label>
+                <input type="number" name="questionSeven" value={data[3].questionSeven} readOnly />
+                <br></br>
                 <label>Question </label>
                 <input type="text" name="question" value={data[3].question} readOnly />
+                <br></br>
             </div>
             <input type="submit" value="Send" />
 
