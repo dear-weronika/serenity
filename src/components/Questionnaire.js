@@ -18,15 +18,15 @@ const marksOne = [
 const marksTwo = [
     {
         value: 1,
-        label: "Feeling anxious"
+        label: "Calm and peaceful"
     },
     {
         value: 5,
-        label: "Moderately relaxed "
+        label: "Moderately relaxed"
     },
     {
         value: 10,
-        label: "Calm and peaceful"
+        label: "Feeling anxious "
     }
 ]
 const marksThree = [
@@ -44,21 +44,21 @@ const marksThree = [
     }
 ]
 
-export default function Questionnaire({ handleClick, version, handleSendData}) {
+export default function Questionnaire({ handleClick, version, handleSendData }) {
 
     const [data, setData] = useState({
-        questionOne : 5, 
-        questionTwo : 5,
-        questionThree : 5,
+        questionOne: 5,
+        questionTwo: 5,
+        questionThree: 5,
     })
 
-    const handleChange = (e)=>{
+    const handleChange = (e) => {
         const name = e.target.name
         const value = e.target.value
-        setData(values => ({...values,[name]: value}))
+        setData(values => ({ ...values, [name]: value }))
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault()
         handleSendData(data)
         handleClick()
@@ -70,7 +70,7 @@ export default function Questionnaire({ handleClick, version, handleSendData}) {
             <Box sx={{ width: 400, p: 2 }}>
                 <h4>Question 1</h4>
                 <h5>How would you rate your current level of stress on a scale of 1 to 10?</h5>
-                <Slider 
+                <Slider
                     name="questionOne"
                     marks={marksOne}
                     valueLabelDisplay="auto"
