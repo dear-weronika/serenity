@@ -18,11 +18,11 @@ const marksOne = [
 const marksTwo = [
     {
         value: 1,
-        label: "Feeling stressed or anxious"
+        label: "Feeling anxious"
     },
     {
         value: 5,
-        label: "Moderately relaxed but with some lingering tension"
+        label: "Moderately relaxed "
     },
     {
         value: 10,
