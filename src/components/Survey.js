@@ -1,4 +1,4 @@
-import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider} from "@mui/material"
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider } from "@mui/material"
 import { useEffect, useState } from "react"
 
 
@@ -25,8 +25,11 @@ export default function Survey({ handleSendData, handleClick }) {
         technologyUsage: "",
         practisedMeditation: "",
         practiceBreathing: "",
-        marksSeven: "",
-        question: ""
+        // marksSeven: "",
+        questionSeven: "",
+        questionEight: "",
+        questionNine: "",
+        questionTen: ""
     })
 
     const handleChange = (e) => {
@@ -182,10 +185,51 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
                 <h2>Question 8</h2>
-                <h3>Why do you prefer the version with or without haptic feedback?</h3>
+                <h3>What devices do you typically use for breathing exercises (e.g., smartphone, smartwatch, dedicated breathing device)?</h3>
+                <FormControl>
+                    <FormLabel id="questionEight">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="questionEight"
+                        name="questionEight"
+                        value={data.questionEight}
+                        onChange={handleChange}
+                    >
+                        <FormControlLabel value="Smartphone apps" control={<Radio />} label="Smartphone apps" />
+                        <FormControlLabel value="Smartwatch" control={<Radio />} label="Smartwatch" />
+                        <FormControlLabel value="Breathing device(melo) etc" control={<Radio />} label="Breathing device(melo) etc" />
+                        <FormControlLabel value="None, I prefer to practice breathing exercises without any specific device." control={<Radio />} label="None, I prefer to practice breathing exercises without any specific device." />
+                        <FormControlLabel value="Other" control={<Radio />} label="Other" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 400, p: 2 }}>
+                <h2>Question 9</h2>
+                <h3>What features do you look for in a breathing exercise app?</h3>
+                <FormControl>
+                    <FormLabel id="questionNine">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="questionNine"
+                        name="questionNine"
+                        value={data.questionNine}
+                        onChange={handleChange}
+                    >
+                        <FormControlLabel value="Guided Breathing Exercises" control={<Radio />} label="Guided Breathing Exercises" />
+                        <FormControlLabel value="Customisable Breathing Patterns" control={<Radio />} label="Customisable Breathing Patterns" />
+                        <FormControlLabel value="Relaxing Background Music" control={<Radio />} label="Relaxing Background Music" />
+                        <FormControlLabel value="Visual Breathing Guides" control={<Radio />} label="Visual Breathing Guides" />
+                        <FormControlLabel value="Breathing Techniques for Specific Goals (e.g., stress relief, sleep aid)" control={<Radio />} label="Breathing Techniques for Specific Goals (e.g., stress relief, sleep aid)" />
+                        <FormControlLabel value="Progress Tracking and Analytics" control={<Radio />} label="Progress Tracking and Analytics" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 400, p: 2 }}>
+                <h2>Question 10</h2>
+                <h3>Have you used apps with haptic feedback for breathing exercises before? If yes, what was your experience?</h3>
                 <TextField
-                    name="question"
-                    value={data.question}
+                    name="questionTen"
+                    value={data.questionTen}
                     onChange={handleChange}
                     label="Write something"
                 />

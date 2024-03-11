@@ -74,11 +74,17 @@ export default function FinalPage({ data, handleClick }) {
                 <label>Practice Breathing</label>
                 <input type="text" name="practiceBreathing" value={data[3].practiceBreathing} readOnly />
                 <br></br>
-                <label>Question 7</label>
+                <label>Question Seven</label>
                 <input type="number" name="questionSeven" value={data[3].questionSeven} readOnly />
                 <br></br>
-                <label>Question </label>
-                <input type="text" name="question" value={data[3].question} readOnly />
+                <label>Question Eight</label>
+                <input type="text" name="questionEight" value={data[3].questionEight} readOnly />
+                <br></br>
+                <label>Question Nine</label>
+                <input type="text" name="questionNine" value={data[3].questionNine} readOnly />
+                <br></br>
+                <label>Question Ten </label>
+                <input type="text" name="questionTen" value={data[3].questionTen} readOnly />
                 <br></br>
             </div>
             <input type="submit" value="Send" />
