@@ -12,6 +12,8 @@ export default function HapticTest({ handleYes, handleNo }) {
         <div>
             <p>Did haptic work ?</p>
             <button onClick={handleYes}>yes</button>
+            <br></br>
+            <br></br>
             <button onClick={handleNo}>no</button>
         </div>
     )
@@ -19,8 +21,8 @@ export default function HapticTest({ handleYes, handleNo }) {
 
     return (
         <div>
-            <p>Click on the button to check if haptic works !</p>
-            <button onClick={() => test()}>Trigger</button>
+            <p>Click on the button to check if haptic/vibration works !</p>
+            <button onClick={() => test()}>Haptic Test</button>
             {state}
 
         </div>
