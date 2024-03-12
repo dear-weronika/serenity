@@ -78,13 +78,13 @@ export default function FinalPage({ data, handleClick }) {
                 <input type="number" name="questionSeven" value={data[3].questionSeven} readOnly />
                 <br></br> 
                 <label>Question Eight</label>
-                <input type="text" name="questionEight" value={data[3].questionEight} readOnly />
+                <input type="text" name="query8" value={data[3].query8} readOnly />
                 <br></br>
                 <label>Question Nine</label>
-                <input type="text" name="questionNine" value={data[3].questionNine} readOnly />
+                <input type="text" name="query9" value={data[3].query9} readOnly />
                 <br></br>
                 <label>Question Ten </label>
-                <input type="text" name="questionTen" value={data[3].questionTen} readOnly />
+                <input type="text" name="query10" value={data[3].query10} readOnly />
                 <br></br>
             </div>
             <input type="submit" value="Send" />

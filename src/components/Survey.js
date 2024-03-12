@@ -26,9 +26,9 @@ export default function Survey({ handleSendData, handleClick }) {
         query5: "",
         query6: "",
         query7: "",
-        questionEight: "",
-        questionNine: "",
-        questionTen: ""
+        query8: "",
+        query9: "",
+        query10: ""
     })
 
     const handleChange = (e) => {
@@ -186,12 +186,12 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 8</h4>
                 <h5>What devices do you typically use for breathing exercises (e.g., smartphone, smartwatch, dedicated breathing device)?</h5>
                 <FormControl>
-                    <FormLabel id="questionEight">
+                    <FormLabel id="query8">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="questionEight"
-                        name="questionEight"
-                        value={data.questionEight}
+                        aria-labelledby="query8"
+                        name="query8"
+                        value={data.query8}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="Smartphone apps" control={<Radio />} label="Smartphone apps" />
@@ -206,12 +206,12 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 9</h4>
                 <h5>What features do you look for in a breathing exercise app?</h5>
                 <FormControl>
-                    <FormLabel id="questionNine">
+                    <FormLabel id="query9">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="questionNine"
-                        name="questionNine"
-                        value={data.questionNine}
+                        aria-labelledby="query9"
+                        name="query9"
+                        value={data.query9}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="Guided Breathing Exercises" control={<Radio />} label="Guided Breathing Exercises" />
@@ -227,8 +227,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 10</h4>
                 <h5>Have you used apps with haptic feedback for breathing exercises before? If yes, what was your experience?</h5>
                 <TextField
-                    name="questionTen"
-                    value={data.questionTen}
+                    name="query10"
+                    value={data.query10}
                     onChange={handleChange}
                     label="Write something"
                 />
