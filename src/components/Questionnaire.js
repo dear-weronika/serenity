@@ -66,7 +66,7 @@ export default function Questionnaire({ handleClick, version, handleSendData }) 
 
     return (
         <Box>
-            <h1>Questionnaire {version}</h1>
+            <h3>Questionnaire {version}</h3>
             <Box sx={{ width: 400, p: 2 }}>
                 <h4>Question 1</h4>
                 <h5>How would you rate your current level of stress on a scale of 1 to 10?</h5>

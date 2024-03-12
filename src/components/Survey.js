@@ -47,7 +47,7 @@ export default function Survey({ handleSendData, handleClick }) {
     }, [data])
     return (
         <div>
-            <h5>Survery Final</h5>
+            <h3>Survery Final</h3>
             <Box sx={{ width: 400, p: 2}}>
                 <h4>Question 1</h4>
                 <h5>What is your gender?</h5>
