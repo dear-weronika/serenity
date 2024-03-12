@@ -60,10 +60,10 @@ export default function FinalPage({ data, handleClick }) {
                 <input type="text" name="query1" value={data[3].query1} readOnly />
                 <br></br>
                 <label>query2</label>
-                <input type="text" name="age" value={data[3].query2} readOnly />
+                <input type="text" name="query2" value={data[3].query2} readOnly />
                 <br></br>
                 <label>Occupation</label>
-                <input type="text" name="occupation" value={data[3].occupation} readOnly />
+                <input type="text" name="query3" value={data[3].query3} readOnly />
                 <br></br>
                 <label>Technology Usage</label>
                 <input type="text" name="technologyUsage" value={data[3].technologyUsage} readOnly />

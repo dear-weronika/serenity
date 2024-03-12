@@ -21,12 +21,11 @@ export default function Survey({ handleSendData, handleClick }) {
     const [data, setData] = useState({
         query1: "",
         query2: "",
-        occupation: "",
-        technologyUsage: "",
-        practisedMeditation: "",
-        practiceBreathing: "",
-        // marksSeven: "",
-        questionSeven: "",
+        query3: "",
+        query4: "",
+        query5: "",
+        query6: "",
+        query7: "",
         questionEight: "",
         questionNine: "",
         questionTen: ""
@@ -93,12 +92,12 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 3</h4>
                 <h5>What is your current occupation?</h5>
                 <FormControl>
-                    <FormLabel id="occupation">
+                    <FormLabel id="query3">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="occupation"
-                        name="occupation"
-                        value={data.occupation}
+                        aria-labelledby="query3"
+                        name="query3"
+                        value={data.query3}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="full-time employed" control={<Radio />} label="full-time employed" />
@@ -115,12 +114,12 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 4</h4>
                 <h5>How often do you use technology in your daily life?</h5>
                 <FormControl>
-                    <FormLabel id="technologyUsage">
+                    <FormLabel id="query4">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="technologyUsage"
-                        name="technologyUsage"
-                        value={data.technologyUsage}
+                        aria-labelledby="query4"
+                        name="query4"
+                        value={data.query4}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="Heavy user (use technology extensively throughout the day)" control={<Radio />} label="Heavy user (use technology extensively throughout the day)" />
@@ -134,12 +133,12 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 5</h4>
                 <h5>Have you practised meditation or mindfulness exercises before?</h5>
                 <FormControl>
-                    <FormLabel id="practisedMeditation">
+                    <FormLabel id="query5">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="practisedMeditation"
-                        name="practisedMeditation"
-                        value={data.practisedMeditation}
+                        aria-labelledby="query5"
+                        name="query5"
+                        value={data.query5}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="I practice regularly" control={<Radio />} label="I practice regularly" />
@@ -153,12 +152,12 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 6</h4>
                 <h5>How frequently do you practice breathing exercises?</h5>
                 <FormControl>
-                    <FormLabel id="practiceBreathing">
+                    <FormLabel id="query6">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="practiceBreathing"
-                        name="practiceBreathing"
-                        value={data.practiceBreathing}
+                        aria-labelledby="query6"
+                        name="query6"
+                        value={data.query6}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="Daily" control={<Radio />} label="Daily" />
@@ -173,10 +172,10 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h4>Question 7</h4>
                 <h5>On a scale of 1 to 10, how relaxed do you feel right now?</h5>
                 <Slider
-                    name="questionSeven"
+                    name="query7"
                     marks={marksSeven}
                     valueLabelDisplay="auto"
-                    value={data.questionSeven}
+                    value={data.query7}
                     onChange={handleChange}
                     shiftStep={1}
                     min={1}
