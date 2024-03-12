@@ -12,8 +12,6 @@ export default function HapticTest({ handleYes, handleNo }) {
         <div>
             <p>Did haptic work ?</p>
             <button onClick={handleYes}>yes</button>
-            <br></br>
-            <br></br>
             <button onClick={handleNo}>no</button>
         </div>
     )
