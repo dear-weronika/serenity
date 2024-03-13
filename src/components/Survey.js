@@ -28,7 +28,22 @@ export default function Survey({ handleSendData, handleClick }) {
         query7: "",
         query8: "",
         query9: "",
-        query10: ""
+        query10: "",
+        query11: "",
+        query12: "",
+        query13: "",
+        query14: "",
+        query15: "",
+        query16: "",
+        query17: "",
+        query18: "",
+        query19: "",
+        query20: "",
+        query21: "",
+        query22: "",
+        query23: "",
+        query24: "",
+        query25: ""
     })
 
     const handleChange = (e) => {
@@ -47,7 +62,7 @@ export default function Survey({ handleSendData, handleClick }) {
     return (
         <div>
             <h3>Survery Final</h3>
-            <Box sx={{ width: 400, p: 2}}>
+            <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 1</h4>
                 <h5>What is your gender?</h5>
                 <FormControl>
@@ -67,7 +82,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 2</h4>
                 <h5>Which age group do you belong to? </h5>
                 <FormControl>
@@ -88,7 +103,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 3</h4>
                 <h5>What is your current occupation?</h5>
                 <FormControl>
@@ -110,7 +125,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 4</h4>
                 <h5>How often do you use technology in your daily life?</h5>
                 <FormControl>
@@ -129,7 +144,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 5</h4>
                 <h5>Have you practised meditation or mindfulness exercises before?</h5>
                 <FormControl>
@@ -148,7 +163,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 6</h4>
                 <h5>How frequently do you practice breathing exercises?</h5>
                 <FormControl>
@@ -168,7 +183,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 7</h4>
                 <h5>On a scale of 1 to 10, how relaxed do you feel right now?</h5>
                 <Slider
@@ -182,7 +197,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     max={10}
                 />
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 8</h4>
                 <h5>What devices do you typically use for breathing exercises (e.g., smartphone, smartwatch, dedicated breathing device)?</h5>
                 <FormControl>
@@ -202,7 +217,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 9</h4>
                 <h5>What features do you look for in a breathing exercise app?</h5>
                 <FormControl>
@@ -223,7 +238,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     </RadioGroup>
                 </FormControl>
             </Box>
-            <Box sx={{ width: 400, p: 2 }}>
+            <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 10</h4>
                 <h5>Have you used apps with haptic feedback for breathing exercises before? If yes, what was your experience?</h5>
                 <TextField
