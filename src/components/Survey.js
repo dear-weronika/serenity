@@ -348,7 +348,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 13</h4>
-                <h5>What is your gender?</h5>
+                <h5>Did you notice any differences in your experience or effectiveness of the breathing exercises between the two versions? (with haptic / without haptic feedback)</h5>
                 <FormControl>
                     <FormLabel id="query13">
                     </FormLabel>
@@ -385,7 +385,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 15</h4>
-                <h5>What is your gender?</h5>
+                <h5>If yes, how would you describe the experience of the haptic feedback?</h5>
                 <FormControl>
                     <FormLabel id="query15">
                     </FormLabel>
@@ -433,7 +433,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 18</h4>
-                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <h5> Did you find the haptic feedback accurately reflected the rhythm or pace of the exercises?</h5>
                 <FormControl>
                     <FormLabel id="query18">
                     </FormLabel>
@@ -450,7 +450,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 19</h4>
-                <h5> Did the haptic feedback enhance or distract from your experience of the breathing exercises?</h5>
+                <h5>  On a scale of 1 to 5, how likely are you to continue using the version of the app with haptic feedback?</h5>
                 <Slider
                     name="query19"
                     marks={marksNineteen}
@@ -464,7 +464,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 20</h4>
-                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <h5>Did the haptic feedback feel natural and intuitive?</h5>
                 <FormControl>
                     <FormLabel id="query20">
                     </FormLabel>
@@ -509,7 +509,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 23</h4>
-                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <h5>If given the option, would you prefer to use the version of the app with haptic feedback or without?</h5>
                 <FormControl>
                     <FormLabel id="query23">
                     </FormLabel>
