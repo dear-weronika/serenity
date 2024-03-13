@@ -83,7 +83,6 @@ export default function Questionnaire({ handleClick, version, handleSendData }) 
                     shiftStep={1}
                     min={1}
                     max={10}
-                    className="slider-width100"
                 />
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
