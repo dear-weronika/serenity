@@ -5,7 +5,7 @@ import { AnimationContext } from "../../App"
 
 
 
-export default function BreathingExercise({ version }) {
+export default function BreathingExercise({ shouldVibrate }) {
 
 
     const { animationStart, setAnimationStart } = useContext(AnimationContext)
@@ -19,7 +19,7 @@ export default function BreathingExercise({ version }) {
 
             {!animationStart
                 ? <StartExercise handleClick={handleClick} />
-                : <Exercise version={version} />}
+                : <Exercise shouldVibrate={shouldVibrate} />}
         </div>
     )
 };

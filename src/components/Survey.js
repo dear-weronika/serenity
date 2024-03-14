@@ -87,9 +87,10 @@ const marksNineteen = [
         label: "Most Likely"
     }
 ]
-export default function Survey({ handleSendData, handleClick }) {
+export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 
     const [data, setData] = useState({
+        query0: shouldVibrate,
         query1: "",
         query2: "",
         query3: "",
