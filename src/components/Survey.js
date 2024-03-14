@@ -90,7 +90,7 @@ const marksNineteen = [
 export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 
     const [data, setData] = useState({
-        query0: shouldVibrate,
+        query0: shouldVibrate?"yes":"no",
         query1: "",
         query2: "",
         query3: "",
