@@ -1,4 +1,4 @@
-import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider, Checkbox, FormGroup } from "@mui/material"
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider, Checkbox, FormGroup, Button } from "@mui/material"
 import { useEffect, useState } from "react"
 
 
@@ -133,7 +133,9 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
     }, [data])
     return (
         <div>
-            <h3>Survery Final</h3>
+            <h2>Thank you for completing the exercises.</h2> 
+            <h2> Now, the final step is a survey that will take less than 5 minutes</h2>
+            <h3>Survery </h3>
             <Box sx={{ width: 250, p: 2}}>
                 <h4>Question 1</h4>
                 <h5>What is your gender?</h5>
@@ -547,7 +549,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
                     label="Write something"
                 />
             </Box>
-            <button onClick={handleSubmit}>Click</button>
+            <Button variant="contained" onClick={handleSubmit}>Next</Button>
         </div>
     )
 
