@@ -79,11 +79,20 @@ export default function FinalPage({ data, handleClick }) {
                 <label>query 6</label>
                 <input type="text" name="query6" value={data[3].query6} readOnly />
                 <br></br>
-                <label>query 7</label>
-                <input type="number" name="query7" value={data[3].query7} readOnly />
+                <label>query 6a</label>
+                <input type="text" name="query6a" value={data[3].query6a} readOnly />
                 <br></br> 
+                <label>query 7</label>
+                <input type="text" name="query7" value={data[3].query7} readOnly />
+                <br></br>
+                <label>query 7a</label>
+                <input type="text" name="query7a" value={data[3].query7a} readOnly />
+                <br></br>
                 <label>query 8</label>
-                <input type="text" name="query8" value={data[3].query8} readOnly />
+                <input type="number" name="query8" value={data[3].query8} readOnly />
+                <br></br>
+                <label>query 8a</label>
+                <input type="number" name="query8a" value={data[3].query8a} readOnly />
                 <br></br>
                 <label>query 9</label>
                 <input type="text" name="query9" value={data[3].query9} readOnly />
@@ -94,17 +103,23 @@ export default function FinalPage({ data, handleClick }) {
                 <label>query 11</label>
                 <input type="text" name="query11" value={data[3].query11} readOnly />
                 <br></br>
+                <label>query 11a</label>
+                <input type="text" name="query11a" value={data[3].query11a} readOnly />
+                <br></br>
                 <label>query 12</label>
-                <input type="number" name="query12" value={data[3].query12} readOnly />
+                <input type="text" name="query12" value={data[3].query12} readOnly />
                 <br></br>
                 <label>query 13</label>
                 <input type="text" name="query13" value={data[3].query13} readOnly />
                 <br></br>
                 <label>query 14</label>
-                <input type="text" name="query14" value={data[3].query14} readOnly />
+                <input type="number" name="query14" value={data[3].query14} readOnly />
+                <br></br>
+                <label>query 14a</label>
+                <input type="number" name="query14a" value={data[3].query14a} readOnly />
                 <br></br>
                 <label>query 15</label>
-                <input type="text" name="query15" value={data[3].query15} readOnly />
+                <input type="number" name="query15" value={data[3].query15} readOnly />
                 <br></br>
                 <label>query 16</label>
                 <input type="number" name="query16" value={data[3].query16} readOnly />
@@ -113,10 +128,10 @@ export default function FinalPage({ data, handleClick }) {
                 <input type="number" name="query17" value={data[3].query17} readOnly />
                 <br></br>
                 <label>query 18</label>
-                <input type="text" name="query18" value={data[3].query18} readOnly />
+                <input type="number" name="query18" value={data[3].query18} readOnly />
                 <br></br>
                 <label>query 19</label>
-                <input type="number" name="query19" value={data[3].query19} readOnly />
+                <input type="text" name="query19" value={data[3].query19} readOnly />
                 <br></br>
                 <label>query 20</label>
                 <input type="text" name="query20" value={data[3].query20} readOnly />
@@ -124,18 +139,7 @@ export default function FinalPage({ data, handleClick }) {
                 <label>query 21</label>
                 <input type="text" name="query21" value={data[3].query21} readOnly />
                 <br></br>
-                <label>query 22</label>
-                <input type="text" name="query22" value={data[3].query22} readOnly />
-                <br></br>
-                <label>query 23</label>
-                <input type="text" name="query23" value={data[3].query23} readOnly />
-                <br></br>
-                <label>query 24</label>
-                <input type="text" name="query24" value={data[3].query24} readOnly />
-                <br></br>
-                <label>query 25</label>
-                <input type="text" name="query25" value={data[3].query25} readOnly />
-                <br></br>
+              
                 
             </div>
             <input type="submit" value="Send" />
