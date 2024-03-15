@@ -73,7 +73,7 @@ function App() {
         setState(<Questionnaire version={questionnaire ? 2 : 3} handleClick={questionnaire ? secondExercise : openSurvey} handleSendData={handleSendData}/>)
         setAnimationStart(!animationStart)
         setQuestionnare(false)
-      }, 60000)
+      }, 1000)
     }
   })
   useEffect(() => {
