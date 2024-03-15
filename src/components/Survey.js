@@ -1,4 +1,4 @@
-import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider } from "@mui/material"
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider, Checkbox, FormGroup } from "@mui/material"
 import { useEffect, useState } from "react"
 
 
@@ -140,17 +140,17 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
                 <FormControl>
                     <FormLabel id="query1">
                     </FormLabel>
-                    <RadioGroup
+                    <FormGroup
                         aria-labelledby="query1"
                         name="query1"
                         value={data.query1}
                         onChange={handleChange} 
                     >
-                        <FormControlLabel value="female" control={<Radio />} label="Female" />
-                        <FormControlLabel value="male" control={<Radio />} label="Male" />
-                        <FormControlLabel value="non binary" control={<Radio />} label="non binary" />
-                        <FormControlLabel value="prefer not to say" control={<Radio />} label="Prefer not to say" />
-                    </RadioGroup>
+                        <FormControlLabel value="female" control={<Checkbox />} label="Female" />
+                        <FormControlLabel value="male" control={<Checkbox />} label="Male" />
+                        <FormControlLabel value="non binary" control={<Checkbox />} label="Non binary" />
+                        <FormControlLabel value="prefer not to say" control={<Checkbox />} label="Prefer not to say" />
+                    </FormGroup>
                 </FormControl>
             </Box>
             <Box sx={{ width: 250, p: 2 }}>
