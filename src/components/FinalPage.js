@@ -36,8 +36,10 @@ export default function FinalPage({ data, handleClick }) {
                 <h4>First Questionnaire</h4>
                 <label>Question 1</label>
                 <input type="number" name="1Q1" value={data[0].questionOne} readOnly />
+                <br></br>
                 <label>Question 2</label>
                 <input type="number" name="1Q2" value={data[0].questionTwo} readOnly />
+                <br></br>
                 <label>Question 3</label>
                 <input type="number" name="1Q3" value={data[0].questionThree} readOnly />
             </div>
@@ -45,8 +47,10 @@ export default function FinalPage({ data, handleClick }) {
                 <h4>Second Questionnaire</h4>
                 <label>Question 1</label>
                 <input type="number" name="2Q1" value={data[1].questionOne} readOnly />
+                <br></br>
                 <label>Question 2</label>
                 <input type="number" name="2Q2" value={data[1].questionTwo} readOnly />
+                <br></br>
                 <label>Question 3</label>
                 <input type="number" name="2Q3" value={data[1].questionThree} readOnly />
             </div>
@@ -54,8 +58,10 @@ export default function FinalPage({ data, handleClick }) {
                 <h4>Third Questionnaire</h4>
                 <label>Question 1</label>
                 <input type="number" name="3Q1" value={data[2].questionOne} readOnly />
+                <br></br>
                 <label>Question 2</label>
                 <input type="number" name="3Q2" value={data[2].questionTwo} readOnly />
+                <br></br>
                 <label>Question 3</label>
                 <input type="number" name="3Q3" value={data[2].questionThree} readOnly />
             </div>
@@ -142,8 +148,9 @@ export default function FinalPage({ data, handleClick }) {
               
                 
             </div>
-            <input type="submit" value="Send" />
-
+                <div style={{ textAlign: 'center' }}>
+                <input type="submit" value="Send" style={{ width: '200px', height: '40px', fontSize: '18px', backgroundColor:'green',color:'white', padding:5, marginTop:15 }}/>
+                </div>
         </form>
     );
 };

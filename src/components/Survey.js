@@ -836,41 +836,12 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
                     label="Write something"
                 />
             </Box>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px' }}>
             <Button variant="contained" onClick={handleSubmit}>
                 Next
             </Button>
+            </div>
         </div>
     );
 }
 
-// <FormControl>
-// 					<FormLabel id="query1"></FormLabel>
-// 					<FormGroup
-// 						aria-labelledby="query1"
-// 						name="query1"
-// 						value={data.query1}
-// 						onChange={handleChange}
-// 					>
-// 						<FormControlLabel
-// 							value="female"
-// 							control={<Checkbox />}
-// 							label="Female"
-// 						/>
-// 						<FormControlLabel
-// 							value="male"
-// 							control={<Checkbox />}
-// 							label="Male"
-// 						/>
-// 						<FormControlLabel
-// 							value="non binary"
-// 							control={<Checkbox />}
-// 							label="Non binary"
-// 						/>
-// 						<FormControlLabel
-// 							value="prefer not to say"
-// 							control={<Checkbox />}
-// 							label="Prefer not to say"
-// 						/>
-// 					</FormGroup>
-// 				</FormControl>
-// {" "}

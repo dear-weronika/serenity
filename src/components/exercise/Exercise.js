@@ -20,13 +20,13 @@ export default function Exercise({shouldVibrate }) {
             setState((prevState) => !prevState)
         }, 8000)
         if (state) {
-            setText("Breath In")
+            setText("Breathe In")
             animate('div', { transform: 'scale(2)' }, { duration: 4 })
             if (shouldVibrate)
                 navigator.vibrate(vibrationIntervals)
             setTimeout(() => setText("Hold"), 4000)
         } else {
-            setText("Breath Out")
+            setText("Breathe Out")
             animate('div', { transform: 'scale(1)' }, { duration: 4 })
             if (shouldVibrate)
                 navigator.vibrate(vibrationIntervals.reverse())
