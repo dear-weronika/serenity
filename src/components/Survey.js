@@ -128,6 +128,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 				"How frequently do you practice breathing exercises?",
 				"query5",
 				[
+					["Daily"],
 					["Several times a week"],
 					["Once a week"],
 					["Occasionally, as needed"],
