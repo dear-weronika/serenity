@@ -1,4 +1,5 @@
 import { Box, Slider } from "@mui/material";
+import { useState } from "react";
 
 const marksOne = [
     {
@@ -43,17 +44,38 @@ const marksThree = [
     }
 ]
 
-export default function Questionnaire({ handleClick, version}) {
+export default function Questionnaire({ handleClick, version, handleSendData}) {
+
+    const [data, setData] = useState({
+        questionOne : 5, 
+        questionTwo : 5,
+        questionThree : 5,
+    })
+
+    const handleChange = (e)=>{
+        const name = e.target.name
+        const value = e.target.value
+        setData(values => ({...values,[name]: value}))
+    }
+
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        handleSendData(data)
+        handleClick()
+    }
+
     return (
         <Box>
             <h1>Questionnaire {version}</h1>
             <Box sx={{ width: 400, p: 2 }}>
                 <h2>Question 1</h2>
                 <h3>How would you rate your current level of stress on a scale of 1 to 10?</h3>
-                <Slider
+                <Slider 
+                    name="questionOne"
                     marks={marksOne}
                     valueLabelDisplay="auto"
-                    defaultValue={5}
+                    value={data.questionOne}
+                    onChange={handleChange}
                     shiftStep={1}
                     min={1}
                     max={10}
@@ -63,9 +85,11 @@ export default function Questionnaire({ handleClick, version}) {
                 <h2>Question 2</h2>
                 <h3>On a scale of 1 to 10, how open are you to trying new relaxation methods or techniques</h3>
                 <Slider
+                    name="questionTwo"
                     marks={marksTwo}
                     valueLabelDisplay="auto"
-                    defaultValue={5}
+                    value={data.questionTwo}
+                    onChange={handleChange}
                     shiftStep={1}
                     min={1}
                     max={10}
@@ -75,15 +99,17 @@ export default function Questionnaire({ handleClick, version}) {
                 <h2>Question 3</h2>
                 <h3>On a scale of 1 to 10, how relaxed do you feel right now?</h3>
                 <Slider
+                    name="questionThree"
                     marks={marksThree}
                     valueLabelDisplay="auto"
-                    defaultValue={5}
+                    value={data.questionThree}
+                    onChange={handleChange}
                     shiftStep={1}
                     min={1}
                     max={10}
                 />
             </Box>
-            <button onClick={handleClick}>Click</button>
+            <button onClick={handleSubmit}>Click</button>
         </Box>
     )
 };
