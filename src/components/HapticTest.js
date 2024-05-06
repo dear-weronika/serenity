@@ -34,6 +34,8 @@ export default function HapticTest({ handleYes, handleNo }) {
                 <br></br> 
                 <li>The study may include vibration, make sure your phone is <strong>not on silent</strong>, because vibration is off when you're on silent</li>
                 <br></br> 
+                <li>If you are using a Google phone, make sure you turn <strong>ON</strong> the 'Vibrations' and 'Haptic Feedback' settings on your phone </li>
+                <br></br> 
                 <li>Press the button to initiate the vibration test</li>
             </ul>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
