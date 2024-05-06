@@ -18,15 +18,15 @@ const marksOne = [
 const marksTwo = [
     {
         value: 1,
-        label: "Very Skeptical"
+        label: "Feeling stressed or anxious"
     },
     {
         value: 5,
-        label: "Willing to Consider"
+        label: "Moderately relaxed but with some lingering tension"
     },
     {
         value: 10,
-        label: "Completely Open"
+        label: "Calm and peaceful"
     }
 ]
 const marksThree = [
@@ -83,7 +83,7 @@ export default function Questionnaire({ handleClick, version, handleSendData}) {
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
                 <h4>Question 2</h4>
-                <h5>On a scale of 1 to 10, how open are you to trying new relaxation methods or techniques</h5>
+                <h5>How would you describe your current state of mind</h5>
                 <Slider
                     name="questionTwo"
                     marks={marksTwo}
@@ -97,7 +97,7 @@ export default function Questionnaire({ handleClick, version, handleSendData}) {
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
                 <h4>Question 3</h4>
-                <h5>On a scale of 1 to 10, how relaxed do you feel right now?</h5>
+                <h5>How relaxed do you feel right now?</h5>
                 <Slider
                     name="questionThree"
                     marks={marksThree}
