@@ -56,11 +56,11 @@ export default function FinalPage({ data, handleClick }) {
             </div>
             <div>
                 <h4>Survey</h4>
-                <label>Gender</label>
-                <input type="text" name="gender" value={data[3].gender} readOnly />
+                <label>query1</label>
+                <input type="text" name="query1" value={data[3].query1} readOnly />
                 <br></br>
-                <label>Age</label>
-                <input type="text" name="age" value={data[3].age} readOnly />
+                <label>query2</label>
+                <input type="text" name="age" value={data[3].query2} readOnly />
                 <br></br>
                 <label>Occupation</label>
                 <input type="text" name="occupation" value={data[3].occupation} readOnly />
@@ -76,7 +76,7 @@ export default function FinalPage({ data, handleClick }) {
                 <br></br>
                 <label>Question Seven</label>
                 <input type="number" name="questionSeven" value={data[3].questionSeven} readOnly />
-                <br></br>
+                <br></br> 
                 <label>Question Eight</label>
                 <input type="text" name="questionEight" value={data[3].questionEight} readOnly />
                 <br></br>

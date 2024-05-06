@@ -19,8 +19,8 @@ const marksSeven = [
 export default function Survey({ handleSendData, handleClick }) {
 
     const [data, setData] = useState({
-        gender: "",
-        age: "",
+        query1: "",
+        query2: "",
         occupation: "",
         technologyUsage: "",
         practisedMeditation: "",
@@ -48,18 +48,18 @@ export default function Survey({ handleSendData, handleClick }) {
     return (
         <div>
             <h5>Survery Final</h5>
-            <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 1</h2>
-                <h3>What is your gender?</h3>
+            <Box sx={{ width: 400, p: 2}}>
+                <h4>Question 1</h4>
+                <h5>What is your gender?</h5>
                 <FormControl>
-                    <FormLabel id="gender">
-                        Gender
+                    <FormLabel id="query1">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="gender"
-                        name="gender"
-                        value={data.gender}
+                        aria-labelledby="query1"
+                        name="query1"
+                        value={data.query1}
                         onChange={handleChange}
+                        
                     >
                         <FormControlLabel value="female" control={<Radio />} label="Female" />
                         <FormControlLabel value="male" control={<Radio />} label="Male" />
@@ -69,15 +69,15 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 2</h2>
-                <h3>Which age group do you belong to? </h3>
+                <h4>Question 2</h4>
+                <h5>Which age group do you belong to? </h5>
                 <FormControl>
-                    <FormLabel id="age">
+                    <FormLabel id="query2">
                     </FormLabel>
                     <RadioGroup
-                        aria-labelledby="age"
-                        name="age"
-                        value={data.age}
+                        aria-labelledby="query2"
+                        name="query2"
+                        value={data.query2}
                         onChange={handleChange}
                     >
                         <FormControlLabel value="Under 18" control={<Radio />} label="Under 18" />
@@ -90,8 +90,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 3</h2>
-                <h3>What is your current occupation?</h3>
+                <h4>Question 3</h4>
+                <h5>What is your current occupation?</h5>
                 <FormControl>
                     <FormLabel id="occupation">
                     </FormLabel>
@@ -112,8 +112,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 4</h2>
-                <h3>How often do you use technology in your daily life?</h3>
+                <h4>Question 4</h4>
+                <h5>How often do you use technology in your daily life?</h5>
                 <FormControl>
                     <FormLabel id="technologyUsage">
                     </FormLabel>
@@ -131,8 +131,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 5</h2>
-                <h3>Have you practised meditation or mindfulness exercises before?</h3>
+                <h4>Question 5</h4>
+                <h5>Have you practised meditation or mindfulness exercises before?</h5>
                 <FormControl>
                     <FormLabel id="practisedMeditation">
                     </FormLabel>
@@ -150,8 +150,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 6</h2>
-                <h3>How frequently do you practice breathing exercises?</h3>
+                <h4>Question 6</h4>
+                <h5>How frequently do you practice breathing exercises?</h5>
                 <FormControl>
                     <FormLabel id="practiceBreathing">
                     </FormLabel>
@@ -184,8 +184,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 />
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 8</h2>
-                <h3>What devices do you typically use for breathing exercises (e.g., smartphone, smartwatch, dedicated breathing device)?</h3>
+                <h4>Question 8</h4>
+                <h5>What devices do you typically use for breathing exercises (e.g., smartphone, smartwatch, dedicated breathing device)?</h5>
                 <FormControl>
                     <FormLabel id="questionEight">
                     </FormLabel>
@@ -204,8 +204,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 9</h2>
-                <h3>What features do you look for in a breathing exercise app?</h3>
+                <h4>Question 9</h4>
+                <h5>What features do you look for in a breathing exercise app?</h5>
                 <FormControl>
                     <FormLabel id="questionNine">
                     </FormLabel>
@@ -225,8 +225,8 @@ export default function Survey({ handleSendData, handleClick }) {
                 </FormControl>
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 10</h2>
-                <h3>Have you used apps with haptic feedback for breathing exercises before? If yes, what was your experience?</h3>
+                <h4>Question 10</h4>
+                <h5>Have you used apps with haptic feedback for breathing exercises before? If yes, what was your experience?</h5>
                 <TextField
                     name="questionTen"
                     value={data.questionTen}
