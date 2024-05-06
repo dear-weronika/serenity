@@ -1,10 +1,31 @@
-import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from "@mui/material"
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Slider} from "@mui/material"
 import { useEffect, useState } from "react"
 
+
+const marksSeven = [
+    {
+        value: 1,
+        label: "Low Stress"
+    },
+    {
+        value: 5,
+        label: "Moderate Stress"
+    },
+    {
+        value: 10,
+        label: "Intense Stress"
+    }
+]
 export default function Survey({ handleSendData, handleClick }) {
 
     const [data, setData] = useState({
         gender: "",
+        age: "",
+        occupation: "",
+        technologyUsage: "",
+        practisedMeditation: "",
+        practiceBreathing: "",
+        marksSeven: "",
         question: ""
     })
 
@@ -49,7 +70,6 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h3>Which age group do you belong to? </h3>
                 <FormControl>
                     <FormLabel id="age">
-                        Age
                     </FormLabel>
                     <RadioGroup
                         aria-labelledby="age"
@@ -71,7 +91,6 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h3>What is your current occupation?</h3>
                 <FormControl>
                     <FormLabel id="occupation">
-                        Occupation
                     </FormLabel>
                     <RadioGroup
                         aria-labelledby="occupation"
@@ -94,7 +113,6 @@ export default function Survey({ handleSendData, handleClick }) {
                 <h3>How often do you use technology in your daily life?</h3>
                 <FormControl>
                     <FormLabel id="technologyUsage">
-                        Technology usage
                     </FormLabel>
                     <RadioGroup
                         aria-labelledby="technologyUsage"
@@ -111,6 +129,59 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
                 <h2>Question 5</h2>
+                <h3>Have you practised meditation or mindfulness exercises before?</h3>
+                <FormControl>
+                    <FormLabel id="practisedMeditation">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="practisedMeditation"
+                        name="practisedMeditation"
+                        value={data.practisedMeditation}
+                        onChange={handleChange}
+                    >
+                        <FormControlLabel value="I practice regularly" control={<Radio />} label="I practice regularly" />
+                        <FormControlLabel value="I have some experience but not regular practice." control={<Radio />} label="I have some experience but not regular practice." />
+                        <FormControlLabel value="I am familiar with it but haven't practised much." control={<Radio />} label="I am familiar with it but haven't practised much." />
+                        <FormControlLabel value="I have no experience with meditation or mindfulness." control={<Radio />} label="I have no experience with meditation or mindfulness." />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 400, p: 2 }}>
+                <h2>Question 6</h2>
+                <h3>How frequently do you practice breathing exercises?</h3>
+                <FormControl>
+                    <FormLabel id="practiceBreathing">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="practiceBreathing"
+                        name="practiceBreathing"
+                        value={data.practiceBreathing}
+                        onChange={handleChange}
+                    >
+                        <FormControlLabel value="Daily" control={<Radio />} label="Daily" />
+                        <FormControlLabel value="Several times a week" control={<Radio />} label="Several times a week" />
+                        <FormControlLabel value="Once a week" control={<Radio />} label="Once a week" />
+                        <FormControlLabel value="Occasionally, as needed" control={<Radio />} label="Occasionally, as neededPrefer not to say" />
+                        <FormControlLabel value="Never" control={<Radio />} label="Never" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 400, p: 2 }}>
+                <h4>Question 7</h4>
+                <h5>On a scale of 1 to 10, how relaxed do you feel right now?</h5>
+                <Slider
+                    name="questionSeven"
+                    marks={marksSeven}
+                    valueLabelDisplay="auto"
+                    value={data.questionSeven}
+                    onChange={handleChange}
+                    shiftStep={1}
+                    min={1}
+                    max={10}
+                />
+            </Box>
+            <Box sx={{ width: 400, p: 2 }}>
+                <h2>Question 8</h2>
                 <h3>Why do you prefer the version with or without haptic feedback?</h3>
                 <TextField
                     name="question"
