@@ -62,7 +62,7 @@ function App() {
   }
 
   function handleSendData(data){
-    setForm([...form,data])
+    setForm(form =>[...form,data])
   }
   useEffect(() => {
     if (animationStart) {
