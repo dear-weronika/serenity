@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 
 // const vibrationIntervals = [100, 400, 100, 300, 100, 200, 100, 150, 100, 130, 100, 120, 100, 110, 100, 100, 100, 90, 100, 80, 100, 80, 100, 80, 100, 80, 100, 500, 100]
-const vibrationIntervals = [1500, 500, 1200, 500, 800, 500, 400]
+const vibrationIntervals = [1300, 500, 1000, 500, 700]
 
 
 export default function Exercise({ version }) {

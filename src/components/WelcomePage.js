@@ -6,7 +6,7 @@ export default function WelcomePage({ handleClick }) {
             <p> Make you sure your vibration settings are on "especially your phone is not on silence mode ".</p>
             <p>Short description</p>
             <button onClick={handleClick}>Start</button>
-
+            <p>Version 0.0.1</p>
         </div>
     )
 };
