@@ -68,8 +68,8 @@ export default function Questionnaire({ handleClick, version, handleSendData}) {
         <Box>
             <h1>Questionnaire {version}</h1>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 1</h2>
-                <h3>How would you rate your current level of stress on a scale of 1 to 10?</h3>
+                <h4>Question 1</h4>
+                <h5>How would you rate your current level of stress on a scale of 1 to 10?</h5>
                 <Slider 
                     name="questionOne"
                     marks={marksOne}
@@ -82,8 +82,8 @@ export default function Questionnaire({ handleClick, version, handleSendData}) {
                 />
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 2</h2>
-                <h3>On a scale of 1 to 10, how open are you to trying new relaxation methods or techniques</h3>
+                <h4>Question 2</h4>
+                <h5>On a scale of 1 to 10, how open are you to trying new relaxation methods or techniques</h5>
                 <Slider
                     name="questionTwo"
                     marks={marksTwo}
@@ -96,8 +96,8 @@ export default function Questionnaire({ handleClick, version, handleSendData}) {
                 />
             </Box>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 3</h2>
-                <h3>On a scale of 1 to 10, how relaxed do you feel right now?</h3>
+                <h4>Question 3</h4>
+                <h5>On a scale of 1 to 10, how relaxed do you feel right now?</h5>
                 <Slider
                     name="questionThree"
                     marks={marksThree}
