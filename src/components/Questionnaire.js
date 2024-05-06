@@ -1,4 +1,4 @@
-import { Box, Slider } from "@mui/material";
+import { Box, Button, Slider } from "@mui/material";
 import { useState } from "react";
 import MediaQuery from 'react-responsive'
 
@@ -158,7 +158,7 @@ export default function Questionnaire({ handleClick, version, handleSendData }) 
                 />
             </Box>
             </MediaQuery>
-            <button onClick={handleSubmit}>Click</button> 
+            <Button variant="contained" onClick={handleSubmit}>Next</Button> 
         </Box>
       
         
