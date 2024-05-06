@@ -1,14 +1,4 @@
 import {
-	Box,
-	FormControl,
-	FormControlLabel,
-	FormLabel,
-	Radio,
-	RadioGroup,
-	TextField,
-	Slider,
-	Checkbox,
-	FormGroup,
 	Button,
 } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -81,12 +71,11 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 		console.log(data);
 	}, [data]);
 	return (
-		<div>
+		<div style={{width:"100%"}}>
 			<h2>Thank you for completing the exercises.</h2>
 			<h2>
 				Now, the final step is a survey that will take less than 5 minutes
 			</h2>
-			<h3>Survery </h3>
 			{getRadioButton(
 				"Question 1",
 				"What is your gender?",
@@ -168,6 +157,8 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 				"If you chose OTHER in the previous question, please specify:",
 				"query6a",
 				["Write something"]
+				,
+				handleChange
 			)}
 			{getCheckbox(
 				"Question 7",

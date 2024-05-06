@@ -1,6 +1,5 @@
-import { Box, Button, Slider } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useState } from "react";
-import MediaQuery from "react-responsive";
 import { getSlider } from "./SurveyHelper";
 
 export default function Questionnaire({
@@ -27,24 +26,24 @@ export default function Questionnaire({
 	};
 
 	return (
-		<Box>
+		<Box style={{width:"100%"}}>
 			<h3>Questionnaire {version}</h3>
 			{getSlider(
-				"Question 1",
+				"",
 				"Describe how STRESSED do you feel rigth now on a scale of 1 to 5?",
 				"questionOne",
 				[1, 5],
 				handleChange
 			)}
 			{getSlider(
-				"Question 2",
+				"",
 				"Describe how RELAXED do you feel rigth now on a scale of 1 to 5?",
 				"questionTwo",
 				[1, 5],
 				handleChange
 			)}
 			{getSlider(
-				"Question 3",
+				"",
 				"Describe how GOOD do you feel rigth now on a scale of 1 to 5?",
 				"questionThree",
 				[1, 5],

@@ -4,7 +4,9 @@ import { Button } from "@mui/material";
 export default function HapticTest({ handleYes, handleNo }) {
     const [state, setState] = useState()
     function test() {
-        navigator.vibrate(1000);
+        if("vibrate"in navigator){
+            navigator.vibrate(1000);
+        }
         // setTimeout(() => navigator.vibrate(1000), 3000)
         // setTimeout(() => navigator.vibrate(1000), 6000)
         setTimeout(() => setState(validation), 1000)

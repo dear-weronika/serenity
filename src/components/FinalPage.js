@@ -72,7 +72,8 @@ export default function FinalPage({ data, handleClick }) {
 			<div>
 				<h4>Version</h4>
 				<label>Vibrate first:</label>
-				<input type="text" name="query0" value={data[3].query0} readOnly />
+				<input type="text" name="query0" value={data[3].query0} readOnly style={{ display: "none" }}/>
+				<input type="text" name="queryVibrationEnabled" value={"vibrate"in navigator} readOnly style={{ display: "none" }}/>
 			</div>
 			{Object.entries(flatData).map(dataItemIntoInput)}
 
