@@ -2,9 +2,9 @@ export default function HapticTestFailed(params) {
 
     return (
         <div>
-          
-            <p>Sorry but your device doesn't meet technial requirments for this test</p>
-
+            <p> Unfortunately, your device doesn't meet technical requirments for this test</p>
+            <p>Thank you,</p>
+            <p>Good bye</p>
         </div>
     )
 };
