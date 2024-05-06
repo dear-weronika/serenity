@@ -12,7 +12,7 @@ export default function HapticTest({ handleYes, handleNo }) {
     const validation = () => (
         <div>
             <p>Did vibrations worked ?</p>
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '40px', justifyContent: 'center' }}>
                 <Button variant="contained" size="small" onClick={handleYes}>yes</Button>
                 <Button variant="contained" size="small" onClick={handleNo}>no</Button>
             </div>
