@@ -15,7 +15,7 @@ export default function WelcomePage({ handleClick }) {
                 <p>To begin PRESS button below</p>
                <p>Thanks again for your involvement!</p>
             <Button variant="contained" onClick={handleClick}>Start</Button>
-            <p>Version 0.1.0</p>
+            <p>Version 0.1.1</p>
         </div>
     )
 };
