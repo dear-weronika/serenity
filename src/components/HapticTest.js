@@ -13,10 +13,10 @@ export default function HapticTest({ handleYes, handleNo }) {
     }
     const validation = () => (
         <div>
-            <p>Did vibrations worked ?</p>
+            <p>Did you feel vibrations on the phone?</p>
             <div style={{ display: 'flex', gap: '40px', justifyContent: 'center' }}>
-                <Button variant="contained" size="small" onClick={handleYes}>yes</Button>
-                <Button variant="contained" size="small" onClick={handleNo}>no</Button>
+                <Button variant="contained" size="small" onClick={handleYes}>yes,I felt the vibration on the phone</Button>
+                <Button variant="contained" size="small" onClick={handleNo}>no,it didn't work on my phone</Button>
             </div>
         </div>
     )
@@ -25,13 +25,15 @@ export default function HapticTest({ handleYes, handleNo }) {
     return (
         <div>
             {/* <p>Click on the button to check if haptic/vibration works !</p> */}
-            <p>Before testing the vibration functionality:</p>
+            <p>Hey, just a few checks before we begin</p>
             <ul>
-                <li>Ensure that your phone is an <strong>ANDROID Device</strong></li>
+                <li>This is an early prototype, so it currently only work on <strong>ANDROID</strong> phone</li>
                 <br></br>
-                <li>Ensure your phone's sound mode is <strong>NOT SILENT</strong></li>
-                <br></br>
-                <li>Press the button a few times to initiate the vibration test</li>
+                <li>Sadly, this app it's <strong>not</strong> compatible with iPhone or laptop at the moment</li>
+                <br></br> 
+                <li>The study may include vibration, make sure your phone is <strong>not on silent</strong>, because vibration is off when you're on silent</li>
+                <br></br> 
+                <li>Press the button to initiate the vibration test</li>
             </ul>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Button variant="contained" onClick={() => test()}>Check Vibration Now </Button>

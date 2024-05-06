@@ -70,10 +70,11 @@ export default function FinalPage({ data, handleClick }) {
 	return (
 		<form ref={form} onSubmit={sendEmail}>
 			<div>
-				<h4>Version</h4>
-				<label>Vibrate first:</label>
-				<input type="text" name="query0" value={data[3].query0} readOnly style={{ display: "none" }}/>
-				<input type="text" name="queryVibrationEnabled" value={"vibrate"in navigator} readOnly style={{ display: "none" }}/>
+				<h4>You're almost there.</h4>
+				<h4>Please <strong>PRESS</strong> button below to complete the study.</h4>
+				<label></label>
+				<input type="text" name="query0" value={data[3].query0}  style={{ display: "none" }} readOnly/>
+				<input type="text" name="queryVibrationEnabled" value={"vibrate"in navigator}  style={{ display: "none" }} readOnly/>
 			</div>
 			{Object.entries(flatData).map(dataItemIntoInput)}
 

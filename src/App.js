@@ -73,7 +73,7 @@ function App() {
         setState(<Questionnaire version={questionnaire ? "2 - Mood Check After 1st Exercise" : "3 - Mood Check After 2nd Exercise"} handleClick={questionnaire ? secondExercise : openSurvey} handleSendData={handleSendData}/>)
         setAnimationStart(!animationStart)
         setQuestionnare(false)
-      }, 1000)
+      }, 60000)
     }
   })
   useEffect(() => {

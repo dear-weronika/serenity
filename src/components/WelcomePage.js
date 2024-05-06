@@ -3,12 +3,19 @@ export default function WelcomePage({ handleClick }) {
     return (
         <div>
             <h1>Welcome to Serenity+ Study</h1>
-            <p><strong>Disclaimer:</strong>
-                Your participation is voluntary, and you can opt out at any time. 
-                Your feedback is valuable as we evaluate different implementations. 
-                Thank you for your participation and understanding.</p>
+            
+            <p>Thank you for participating in our study!</p>
+            <p>It should only take around <strong>10 minutes</strong> of your time.</p>
+                <p>We'll be doing two breathing exercises with animation, each lasting <strong>one minute</strong>.
+                <br></br>
+                One of them might include a gentle vibration.
+                Between exercises, we'll check-in on your mood. Once you've completed the exercises, there will be a survey for you to fill out. </p>
+                <p><strong>Reminder:</strong>
+                Your participation is voluntary, and you can opt out at any time.</p>
+                <p>To begin PRESS button below</p>
+               <p>Thanks again for your involvement!</p>
             <Button variant="contained" onClick={handleClick}>Start</Button>
-            <p>Version 0.0.3</p>
+            <p>Version 0.0.5</p>
         </div>
     )
 };

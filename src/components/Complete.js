@@ -2,7 +2,10 @@ export default function Complete(params) {
     
     return(
         <div>
-            <h5>Thank you for completing the exercises and survey!</h5>
+            <h3>Well done !!</h3>
+            <p>Thank you for completing the exercises and survey!</p>
+            <p>We appreciate your interest in this study.</p>
+            <p>Good Bye</p>
         </div>
     )
 };
