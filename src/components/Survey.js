@@ -311,7 +311,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getTextField(
 				"Question 20",
-				"Which mobile phone did you use for this study?",
+				"Which model of mobile phone did you use for this study?(e.g Samsung Galaxy,Huawei)",
 				"query20",
 				["Write something"],
 				handleChange
