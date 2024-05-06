@@ -30,21 +30,21 @@ export default function Questionnaire({
 			<h3>Questionnaire {version}</h3>
 			{getSlider(
 				"",
-				"Describe how STRESSED do you feel rigth now on a scale of 1 to 5?",
+				"Describe how STRESSED do you feel right now on a scale of 1 to 5?",
 				"questionOne",
 				[1, 5],
 				handleChange
 			)}
 			{getSlider(
 				"",
-				"Describe how RELAXED do you feel rigth now on a scale of 1 to 5?",
+				"Describe how RELAXED do you feel right now on a scale of 1 to 5?",
 				"questionTwo",
 				[1, 5],
 				handleChange
 			)}
 			{getSlider(
 				"",
-				"Describe how GOOD do you feel rigth now on a scale of 1 to 5?",
+				"Describe how GOOD do you feel right now on a scale of 1 to 5?",
 				"questionThree",
 				[1, 5],
 				handleChange
