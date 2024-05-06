@@ -58,7 +58,7 @@ function App() {
     setState(<Survey handleClick = {openFinalPage} handleSendData={handleSendData}/>)
   }
   function openFinalPage(){
-    setState(<FinalPage/>)
+    setState(<FinalPage data={form}/>)
   }
 
   function handleSendData(data){
@@ -70,7 +70,7 @@ function App() {
         setState(<Questionnaire version={questionnaire ? 2 : 3} handleClick={questionnaire ? secondExercise : openSurvey} handleSendData={handleSendData}/>)
         setAnimationStart(!animationStart)
         setQuestionnare(false)
-      }, 12000)
+      }, 1000)
     }
   })
   useEffect(() => {
