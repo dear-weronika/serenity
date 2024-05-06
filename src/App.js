@@ -49,14 +49,14 @@ function App() {
   function firstExercise() {
     const randomExercise = Math.random() < 0.5
     setExercise(randomExercise)
-    setState(<BreathingExercise version={randomExercise} />)
+    setState(<BreathingExercise shouldVibrate={randomExercise} />)
   }
 
   function secondExercise() {
-    setState(<BreathingExercise version={!exercise} />)
+    setState(<BreathingExercise shouldVibrate={!exercise} />)
   }
   function openSurvey() {
-    setState(<Survey handleClick = {openFinalPage} handleSendData={handleSendData}/>)
+    setState(<Survey handleClick = {openFinalPage} handleSendData={handleSendData} shouldVibrate= {exercise}/>)
   }
   function openFinalPage(){
     // setState(<FinalPage data={form}/>)

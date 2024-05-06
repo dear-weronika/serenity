@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 const vibrationIntervals = [1300, 500, 1000, 500, 700]
 
 
-export default function Exercise({ version }) {
+export default function Exercise({shouldVibrate }) {
 
     const [state, setState] = useState(true)
 
@@ -22,19 +22,19 @@ export default function Exercise({ version }) {
         if (state) {
             setText("Breath In")
             animate('div', { transform: 'scale(2)' }, { duration: 4 })
-            if (version)
+            if (shouldVibrate)
                 navigator.vibrate(vibrationIntervals)
             setTimeout(() => setText("Hold"), 4000)
         } else {
             setText("Breath Out")
             animate('div', { transform: 'scale(1)' }, { duration: 4 })
-            if (version)
+            if (shouldVibrate)
                 navigator.vibrate(vibrationIntervals.reverse())
             setTimeout(() => setText("Hold"), 4000)
             // navigator.vibrate(1000)
         }
         return () => clearInterval(interval)
-    }, [state, animate, version])
+    }, [state, animate, shouldVibrate])
 
     return (
         <Container ref={scope} sx={{ display: "flex", flexDirection: "column", justifyContent: "center", height: "100vh", alignItems: "center" }}>
