@@ -119,8 +119,12 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
     })
 
     const handleChange = (e) => {
-        const name = e.target.name
+        let name = e.target.name
+        if(typeof name!=="string"){
+            name=e.target.parentNode.name
+        }
         const value = e.target.value
+        console.log(name,'-',value)
         setData(values => ({ ...values, [name]: value }))
     }
     const handleSubmit = (e) => {
@@ -148,7 +152,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
                         value={data.query1}
                         onChange={handleChange} 
                     >
-                        <FormControlLabel value="female" control={<Checkbox />} label="Female" />
+                        <FormControlLabel value="female" control={<Checkbox />} label="Female" name="banana" />
                         <FormControlLabel value="male" control={<Checkbox />} label="Male" />
                         <FormControlLabel value="non binary" control={<Checkbox />} label="Non binary" />
                         <FormControlLabel value="prefer not to say" control={<Checkbox />} label="Prefer not to say" />
