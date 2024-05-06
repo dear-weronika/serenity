@@ -6,7 +6,6 @@ import HapticTestFailed from "./components/HapticTestFailed";
 import BreathingExercise from "./components/exercise/BreathingExercise";
 import './style.css';
 import { Container } from "@mui/material";
-import PostQuest from "./components/PostQuest";
 import Survey from "./components/Survey";
 
 export const AnimationContext = createContext({
@@ -52,8 +51,8 @@ function App() {
       setTimeout(() => {
         setState(<Questionnaire version={questionnaire ? 2 : 3} handleClick={questionnaire ? secondExercise : openSurvey} />)
         setAnimationStart(!animationStart)
+        setQuestionnare(false)
       }, 12000)
-      setQuestionnare(false)
     }
   })
 

@@ -46,9 +46,9 @@ const marksThree = [
 export default function Questionnaire({ handleClick, version}) {
     return (
         <Box>
-            <h1>Questionnaire</h1>
+            <h1>Questionnaire {version}</h1>
             <Box sx={{ width: 400, p: 2 }}>
-                <h2>Question 134</h2>
+                <h2>Question 1</h2>
                 <h3>How would you rate your current level of stress on a scale of 1 to 10?</h3>
                 <Slider
                     marks={marksOne}
