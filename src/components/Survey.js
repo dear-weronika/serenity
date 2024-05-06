@@ -207,11 +207,11 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 				["Write something"],
 				handleChange
 			)}
-			{getSlider(
+			{getTextField(
 				"Question 10",
 				"What are your overall impressions of the breathing exercises you did a minute ago, specifically regarding the visual graph with the blue bubble?",
 				"query10",
-				[1, 5],
+				["Write something"],
 				handleChange
 			)}
 			{getRadioButton(
