@@ -99,7 +99,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getRadioButton(
 				"Question 3",
-				"How often do you use your mobile phone in daily life",
+				"How often do you use your mobile phone in daily life?",
 				"query3",
 				[
 					["Heavy user (More than 4 hours)"],
@@ -235,7 +235,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getRadioButton(
 				"Question 12",
-				"Did you notice the haptic feedback (vibration) during the breathing exercises?",
+				"Did you notice the vibration (haptic feedback) during the breathing exercises?",
 				"query12",
 				[
 					["I noticed in the first exercise"],
@@ -247,7 +247,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getCheckbox(
 				"Question 13",
-				"If yes, how would you describe the experience of the haptic feedback?",
+				"If yes, how would you describe the experience of the vibration (haptic feedback)?",
 				"query13",
 				[
 					["Subtle vibrations"],
@@ -282,21 +282,21 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getSlider(
 				"Question 16",
-				"Did you find the haptic feedback accurately reflected the rhythm or pace of the exercises?",
+				"Did you find the vibration (haptic feedback) accurately reflected the rhythm or pace of the exercises?",
 				"query16",
 				[1, 5],
 				handleChange
 			)}
 			{getSlider(
 				"Question 17",
-				"Did the haptic feedback feel natural and intuitive?",
+				"Did the vibration (haptic feedback) feel natural and intuitive?",
 				"query17",
 				[1, 5],
 				handleChange
 			)}
 			{getSlider(
 				"Question 18",
-				"Once this app is available how likely are you to continue using the version of the app with vibration haptic feedback?",
+				"Once this app is available how likely are you to continue using the version of the app with vibration (haptic feedback)?",
 				"query18",
 				[1, 5],
 				handleChange
