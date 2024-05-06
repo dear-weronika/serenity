@@ -164,7 +164,7 @@ export default function Survey({ handleSendData, handleClick }) {
                         <FormControlLabel value="Daily" control={<Radio />} label="Daily" />
                         <FormControlLabel value="Several times a week" control={<Radio />} label="Several times a week" />
                         <FormControlLabel value="Once a week" control={<Radio />} label="Once a week" />
-                        <FormControlLabel value="Occasionally, as needed" control={<Radio />} label="Occasionally, as neededPrefer not to say" />
+                        <FormControlLabel value="Occasionally, as needed" control={<Radio />} label="Occasionally, as needed" />
                         <FormControlLabel value="Never" control={<Radio />} label="Never" />
                     </RadioGroup>
                 </FormControl>
