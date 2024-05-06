@@ -28,6 +28,11 @@ export default function FinalPage({ data, handleClick }) {
     return (
         <form ref={form} onSubmit={sendEmail}>
             <div>
+                <h4>Version</h4>
+                <label>Vibrate first:</label>
+                <input type='text' name='query0' value={data[3].query0} readOnly />
+            </div>
+            <div>
                 <h4>First Questionnaire</h4>
                 <label>Question 1</label>
                 <input type="number" name="1Q1" value={data[0].questionOne} readOnly />
