@@ -17,7 +17,7 @@ export default function WelcomePage({ handleClick }) {
             <Button variant="contained" onClick={handleClick}>Start</Button>
             <p>You need to complete this study on an android smartphone. If you are seeing this on your laptop and want to switch to your android device, you can scan below barcode or visit <a href="https://theserenity.netlify.app">https://theserenity.netlify.app</a></p>
             <img src="qrcode_theserenity.netlify.app.png" style={{width:200}}></img>
-            <p>Version 0.1.2</p>
+            <p>Version 0.1.5</p>
         </div>
     )
 };
