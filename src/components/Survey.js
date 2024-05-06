@@ -8,12 +8,83 @@ const marksSeven = [
         label: "Low Stress"
     },
     {
-        value: 5,
-        label: "Moderate Stress"
+        value: 3,
+        label: ""
     },
     {
-        value: 10,
+        value: 5,
         label: "Intense Stress"
+    }
+]
+const marksTen = [
+    {
+        value: 1,
+        label: "Sceptical"
+    },
+    {
+        value: 3,
+        label: ""
+    },
+    {
+        value: 5,
+        label: "Open"
+    }
+]
+const marksTwelve = [
+    {
+        value: 1,
+        label: "Very poor"
+    },
+    {
+        value: 3,
+        label: ""
+    },
+    {
+        value: 5,
+        label: "Satisfied"
+    }
+]
+
+const marksSixteen = [
+    {
+        value: 1,
+        label: "Distracted"
+    },
+    {
+        value: 3,
+        label: ""
+    },
+    {
+        value: 5,
+        label: "Stayed Focus "
+    }
+]
+const marksSeventeen = [
+    {
+        value: 1,
+        label: "Distracted"
+    },
+    {
+        value: 3,
+        label: ""
+    },
+    {
+        value: 5,
+        label: "Enhanced"
+    }
+]
+const marksNineteen = [
+    {
+        value: 1,
+        label: "Less Likely"
+    },
+    {
+        value: 3,
+        label: ""
+    },
+    {
+        value: 5,
+        label: "Most Likely"
     }
 ]
 export default function Survey({ handleSendData, handleClick }) {
@@ -72,8 +143,7 @@ export default function Survey({ handleSendData, handleClick }) {
                         aria-labelledby="query1"
                         name="query1"
                         value={data.query1}
-                        onChange={handleChange}
-                        
+                        onChange={handleChange} 
                     >
                         <FormControlLabel value="female" control={<Radio />} label="Female" />
                         <FormControlLabel value="male" control={<Radio />} label="Male" />
@@ -185,7 +255,7 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 7</h4>
-                <h5>On a scale of 1 to 10, how relaxed do you feel right now?</h5>
+                <h5>On a scale of 1 to 5, how relaxed do you feel right now?</h5>
                 <Slider
                     name="query7"
                     marks={marksSeven}
@@ -194,7 +264,7 @@ export default function Survey({ handleSendData, handleClick }) {
                     onChange={handleChange}
                     shiftStep={1}
                     min={1}
-                    max={10}
+                    max={5}
                 />
             </Box>
             <Box sx={{ width: 250, p: 2 }}>
@@ -240,10 +310,238 @@ export default function Survey({ handleSendData, handleClick }) {
             </Box>
             <Box sx={{ width: 250, p: 2 }}>
                 <h4>Question 10</h4>
+                <h5>How open are you to trying new relaxation methods or techniques?</h5>
+                <Slider
+                    name="query10"
+                    marks={marksTen}
+                    valueLabelDisplay="auto"
+                    value={data.query10}
+                    onChange={handleChange}
+                    shiftStep={1}
+                    min={1}
+                    max={5}
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 11</h4>
                 <h5>Have you used apps with haptic feedback for breathing exercises before? If yes, what was your experience?</h5>
                 <TextField
-                    name="query10"
-                    value={data.query10}
+                    name="query11"
+                    value={data.query11}
+                    onChange={handleChange}
+                    label="Write something"
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 12</h4>
+                <h5>What are your overall impressions of the Serenity+ App?</h5>
+                <Slider
+                    name="query12"
+                    marks={marksTwelve}
+                    valueLabelDisplay="auto"
+                    value={data.query12}
+                    onChange={handleChange}
+                    shiftStep={1}
+                    min={1}
+                    max={5}
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 13</h4>
+                <h5>What is your gender?</h5>
+                <FormControl>
+                    <FormLabel id="query13">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query13"
+                        name="query13"
+                        value={data.query13}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="Yes, I noticed a significant difference." control={<Radio />} label="Yes, I noticed a significant difference." />
+                        <FormControlLabel value="Yes, I noticed a slight difference." control={<Radio />} label="Yes, I noticed a slight difference." />
+                        <FormControlLabel value="No, I did not notice any difference." control={<Radio />} label="No, I did not notice any difference." />
+                        <FormControlLabel value="I'm not sure / I didn't pay close attention." control={<Radio />} label="I'm not sure / I didn't pay close attention." />
+                        <FormControlLabel value="Other" control={<Radio />} label="Other" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 14</h4>
+                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <FormControl>
+                    <FormLabel id="query14">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query14"
+                        name="query14"
+                        value={data.query14}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="yes" control={<Radio />} label="yes" />
+                        <FormControlLabel value="no" control={<Radio />} label="no" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 15</h4>
+                <h5>What is your gender?</h5>
+                <FormControl>
+                    <FormLabel id="query15">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query15"
+                        name="query15"
+                        value={data.query15}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="Subtle vibrations" control={<Radio />} label="Subtle vibrations" />
+                        <FormControlLabel value="Enhanced focus" control={<Radio />} label="Enhanced focus" />
+                        <FormControlLabel value="Soothing sensations" control={<Radio />} label="Soothing sensations" />
+                        <FormControlLabel value="Unexpected but interesting" control={<Radio />} label="Unexpected but interesting" />
+                        <FormControlLabel value="Occasionally distracting" control={<Radio />} label="Occasionally distracting" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 16</h4>
+                <h5>Did the haptic feedback help you stay focused during the breathing exercises?</h5>
+                <Slider
+                    name="query16"
+                    marks={marksSixteen}
+                    valueLabelDisplay="auto"
+                    value={data.query16}
+                    onChange={handleChange}
+                    shiftStep={1}
+                    min={1}
+                    max={5}
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 17</h4>
+                <h5> Did the haptic feedback enhance or distract from your experience of the breathing exercises?</h5>
+                <Slider
+                    name="query17"
+                    marks={marksSeventeen}
+                    valueLabelDisplay="auto"
+                    value={data.query17}
+                    onChange={handleChange}
+                    shiftStep={1}
+                    min={1}
+                    max={5}
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 18</h4>
+                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <FormControl>
+                    <FormLabel id="query18">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query18"
+                        name="query18"
+                        value={data.query18}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="yes" control={<Radio />} label="yes" />
+                        <FormControlLabel value="no" control={<Radio />} label="no" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 19</h4>
+                <h5> Did the haptic feedback enhance or distract from your experience of the breathing exercises?</h5>
+                <Slider
+                    name="query19"
+                    marks={marksNineteen}
+                    valueLabelDisplay="auto"
+                    value={data.query19}
+                    onChange={handleChange}
+                    shiftStep={1}
+                    min={1}
+                    max={5}
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 20</h4>
+                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <FormControl>
+                    <FormLabel id="query20">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query20"
+                        name="query20"
+                        value={data.query20}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="yes" control={<Radio />} label="yes" />
+                        <FormControlLabel value="no" control={<Radio />} label="no" />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 21</h4>
+                <h5> If you've used both app versions (with and without haptic feedback), which one did you prefer?</h5>
+                <FormControl>
+                    <FormLabel id="query21">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query21"
+                        name="query21"
+                        value={data.query21}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="Version with haptic feedback" control={<Radio />} label="Version with haptic feedback" />
+                        <FormControlLabel value="Version without haptic feedback" control={<Radio />} label="Version without haptic feedback" />
+                        <FormControlLabel value="No preference/I haven't used both versions." control={<Radio />} label="No preference/I haven't used both versions." />
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 22</h4>
+                <h5> Why did you prefer the chosen version? Please explain your preference in more detail.</h5>
+                <TextField
+                    name="query22"
+                    value={data.query22}
+                    onChange={handleChange}
+                    label="Write something"
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2}}>
+                <h4>Question 23</h4>
+                <h5>Did you notice the haptic feedback during the breathing exercises?</h5>
+                <FormControl>
+                    <FormLabel id="query23">
+                    </FormLabel>
+                    <RadioGroup
+                        aria-labelledby="query23"
+                        name="query23"
+                        value={data.query23}
+                        onChange={handleChange} 
+                    >
+                        <FormControlLabel value="with haptic feedback" control={<Radio />} label="with haptic feedback" />
+                        <FormControlLabel value="without haptic feedback" control={<Radio />} label="without haptic feedback" />
+                        <FormControlLabel value="No preference" control={<Radio />} label="No preference" />
+
+                    </RadioGroup>
+                </FormControl>
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 24</h4>
+                <h5> Do you have any suggestions for improving the haptic feedback</h5>
+                <TextField
+                    name="query24"
+                    value={data.query24}
+                    onChange={handleChange}
+                    label="Write something"
+                />
+            </Box>
+            <Box sx={{ width: 250, p: 2 }}>
+                <h4>Question 25</h4>
+                <h5>Are there any additional features or adjustments you would like to see in the app related to haptic feedback or breathing exercises</h5>
+                <TextField
+                    name="query25"
+                    value={data.query25}
                     onChange={handleChange}
                     label="Write something"
                 />
