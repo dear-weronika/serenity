@@ -15,8 +15,9 @@ export default function HapticTest({ handleYes, handleNo }) {
         <div>
             <p>Did you feel vibrations on the phone?</p>
             <div style={{ display: 'flex', gap: '40px', justifyContent: 'center' }}>
-                <Button variant="contained" size="small" onClick={handleYes}>yes,I felt the vibration on the phone</Button>
-                <Button variant="contained" size="small" onClick={handleNo}>no,it didn't work on my phone</Button>
+                <Button variant="contained" size="small" onClick={handleYes}>yes,  I felt the vibration on the phone</Button>
+                <br></br>
+                <Button variant="contained" size="small" onClick={handleNo}>no,  it didn't work on my phone</Button>
             </div>
         </div>
     )
@@ -27,9 +28,9 @@ export default function HapticTest({ handleYes, handleNo }) {
             {/* <p>Click on the button to check if haptic/vibration works !</p> */}
             <p>Hey, just a few checks before we begin</p>
             <ul>
-                <li>This is an early prototype, so it currently only work on <strong>ANDROID</strong> phone</li>
+                <li>This is an early prototype, so it currently only works on <strong>ANDROID</strong> phones</li>
                 <br></br>
-                <li>Sadly, this app it's <strong>not</strong> compatible with iPhone or laptop at the moment</li>
+                <li>Sadly, this app is <strong>not</strong> compatible with iPhones or laptops at the moment</li>
                 <br></br> 
                 <li>The study may include vibration, make sure your phone is <strong>not on silent</strong>, because vibration is off when you're on silent</li>
                 <br></br> 

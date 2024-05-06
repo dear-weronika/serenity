@@ -78,9 +78,9 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			</h2>
 			{getRadioButton(
 				"Question 1",
-				"What is your gender?",
+				"What best describes your gender?",
 				"query1",
-				[["Female"], ["Male"], ["Non Binary"], ["Prefer not to say"]],
+				[["Female"], ["Male"], ["Non Binary"], ["Prefer not to say"], ["A gender not listed here"]],
 				handleChange
 			)}
 			{getRadioButton(
@@ -209,7 +209,7 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getTextField(
 				"Question 10",
-				"What are your overall impressions of the breathing exercises you did a minute ago, specifically regarding the visual graph with the blue bubble?",
+				"In the exercises, you could see a blue bubble growing and shrinking. What did you think about that visualization and why?",
 				"query10",
 				["Write something"],
 				handleChange
@@ -304,14 +304,14 @@ export default function Survey({ handleSendData, handleClick, shouldVibrate }) {
 			)}
 			{getTextField(
 				"Question 19",
-				"Why did you prefer the chosen version? Please explain your preference in more detail.",
+				"Do you have any suggestions for improving the vibration (haptic feedback)?",
 				"query19",
 				["Write something"],
 				handleChange
 			)}
 			{getTextField(
 				"Question 20",
-				"Do you have any suggestions for improving the vibration (haptic feedback)",
+				"Which mobile phone did you use for this study?",
 				"query20",
 				["Write something"],
 				handleChange
